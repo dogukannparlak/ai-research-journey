@@ -1,0 +1,41 @@
+# Virtual environments
+**/.venv/
+**/venv/
+**/env/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Data files (large binaries)
+**/*.npz
+**/*.npy
+
+# Generated outputs
+**/results/*.csv
+**/results/*.png
+
+# Trained models
+**/*.pt
+**/*.pth
+**/*.h5
+**/*.pkl
+
+# Jupyter
+**/.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Turkish source notes
+**/*-TR.md
