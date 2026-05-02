@@ -15,9 +15,10 @@ This journey starts with early neural computation and connectionism, then moves 
 - Pre-1980 foundations: McCulloch-Pitts neurons, Rosenblatt's Perceptron, early learning systems, and the first debates around connectionist models.
 - 1980s revival: Hopfield networks, backpropagation, universal approximation, and recurrent learning.
 - 1990s foundations: vanishing gradients, convolutional networks, LSTM, bidirectional RNNs, wake-sleep learning, and LeNet.
+- 2000s–2010s: the deep learning revolution — AlexNet, large-scale GPU training, ReLU, dropout, and the ImageNet benchmark.
 - Hands-on reproductions: runnable implementations of historically important models, with experiments and comparisons against classical baselines.
 
-Future additions may extend the timeline into modern deep learning, including AlexNet, sequence-to-sequence models, attention, Transformers, diffusion models, and large language models.
+Future additions may extend the timeline into modern deep learning, including sequence-to-sequence models, attention, Transformers, diffusion models, and large language models.
 
 ## Repository Structure
 
@@ -32,11 +33,25 @@ ai-research-journey/
 |       `-- 1990s-Notes.md
 |
 |-- Deep Learning/
+|   |-- MLP/
+|   |   `-- Perceptron-Iris-1958/
+|   |       |-- README.md
+|   |       |-- train.py
+|   |       |-- compare.py
+|   |       |-- src/
+|   |       `-- results/
 |   `-- CNN/
-|       `-- LeNet-MNIST-1998/
+|       |-- LeNet-MNIST-1998/
+|       |   |-- README.md
+|       |   |-- train.py
+|       |   |-- compare.py
+|       |   |-- src/
+|       |   `-- results/
+|       `-- AlexNet-CIFAR10-2012/
 |           |-- README.md
 |           |-- train.py
 |           |-- compare.py
+|           |-- setup_data.py
 |           |-- src/
 |           `-- results/
 |
@@ -55,6 +70,14 @@ The `History/` directory contains period-based notes that connect the technical 
 
 These notes focus on architecture-level understanding: what each model assumes, how information flows through it, how learning happens, and what limitations pushed the field forward.
 
+### Perceptron & MLP on Iris
+
+The first runnable reproduction is [Perceptron & MLP on Iris](Deep%20Learning/MLP/Perceptron-Iris-1958/README.md), based on:
+
+> Rosenblatt, F. - "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain" (1958)
+
+This project implements Rosenblatt's Perceptron and a two-layer MLP in PyTorch, applied to Fisher's Iris dataset (150 samples, 4 features, 3 classes). The purpose is to make the Perceptron convergence theorem concrete: Iris setosa is perfectly linearly separable and the Perceptron classifies it flawlessly, while the versicolor/virginica overlap cannot be resolved without a hidden layer. Adding one hidden layer with ReLU crosses that boundary. The project also compares against SVM, kNN, and Logistic Regression baselines.
+
 ### LeNet-5 on MNIST
 
 The first runnable reproduction is [LeNet-5 on MNIST](Deep%20Learning/CNN/LeNet-MNIST-1998/README.md), based on:
@@ -62,6 +85,14 @@ The first runnable reproduction is [LeNet-5 on MNIST](Deep%20Learning/CNN/LeNet-
 > LeCun, Bottou, Bengio, and Haffner - "Gradient-Based Learning Applied to Document Recognition" (1998)
 
 This project implements LeNet-5 in PyTorch and compares it against classical machine learning baselines such as SVM and kNN. The purpose is not only to reproduce a result, but to understand why convolutional networks were such an important shift for vision tasks.
+
+### AlexNet on CIFAR-10
+
+The second reproduction is [AlexNet on CIFAR-10](Deep%20Learning/CNN/AlexNet-CIFAR10-2012/README.md), based on:
+
+> Krizhevsky, Sutskever, and Hinton - "ImageNet Classification with Deep Convolutional Neural Networks" (NeurIPS 2012)
+
+This project adapts AlexNet for the CIFAR-10 dataset (32×32 RGB, 10 classes) and compares it against SVM and kNN baselines. The focus is on understanding what made AlexNet a turning point: ReLU activations, dropout regularization, overlapping pooling, and data augmentation — and why classical methods could not compete at this scale.
 
 ## Research Method
 
