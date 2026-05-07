@@ -1,0 +1,113 @@
+﻿
++-- .idea
+|   +-- inspectionProfiles
+|   |   +-- profiles_settings.xml
+|   |   +-- Project_Default.xml
+|   +-- .gitignore
+|   +-- .name
+|   +-- History.iml
+|   +-- misc.xml
+|   +-- modules.xml
+|   +-- php.xml
+|   +-- workspace.xml
++-- 1980s
+|   +-- 1980s-Notes-TR.md
+|   +-- 1980s-Notes.md
+|   +-- 1982 - Neural Networks and Physical Systems with Emergent Collective Computational Abilities - Hopfield.pdf
+|   +-- 1986 - Learning Representations by Back-Propagating Errors - Rumelhart et al..pdf
+|   +-- 1989 - A Learning Algorithm for Continually Running Fully Recurrent Neural Networks - Williams & Zipser.pdf
+|   +-- 1989 - Approximation by Superpositions of a Sigmoidal Function - Cybenko.pdf
++-- 1990s
+|   +-- 1990s-Notes-TR.md
+|   +-- 1990s-Notes.md
+|   +-- 1994 - Learning Long-Term Dependencies with Gradient Descent Is Difficult - Bengio et al..pdf
+|   +-- 1995 - Convolutional Networks for Images, Speech, and Time-Series - LeCun & Bengio.pdf
+|   +-- 1995 - The Wake-Sleep Algorithm for Unsupervised Neural Networks - Hinton et al..pdf
+|   +-- 1997 - Bidirectional Recurrent Neural Networks - Schuster & Paliwal.pdf
+|   +-- 1997 - Long Short-Term Memory - Hochreiter & Schmidhuber.pdf
+|   +-- 1998 - Gradient-Based Learning Applied to Document Recognition - LeCun et al..pdf
++-- 2000s
+|   +-- 2000s-Notes-TR.md
+|   +-- 2000s-Notes.md
+|   +-- 2003 - A Neural Probabilistic Language Model - Bengio et al..pdf
+|   +-- 2006 - A Fast Learning Algorithm for Deep Belief Nets - Hinton et al..pdf
+|   +-- 2006 - Reducing the Dimensionality of Data with Neural Networks - Hinton & Salakhutdinov.pdf
+|   +-- 2007 - Greedy Layer-Wise Training of Deep Networks - Bengio et al..pdf
+|   +-- 2008 - Extracting and Composing Robust Features with Denoising Autoencoders - Vincent et al..pdf
+|   +-- 2009 - Convolutional Deep Belief Networks for Scalable Unsupervised Learning of Hierarchical Representations - Lee et al..pdf
+|   +-- 2009 - What is the Best Multi-Stage Architecture for Object Recognition - Jarrett et al..pdf
++-- 2010s
+|   +-- 2010-2011
+|   |   +-- 2010 - Rectified Linear Units Improve Restricted Boltzmann Machines - Nair & Hinton.pdf
+|   |   +-- 2010 - Stacked Denoising Autoencoders - Learning Useful Representations in a Deep Network with a Local Denoising Criterion -Vincent et al..pdf
+|   |   +-- 2010 - Understanding the Difficulty of Training Deep Feedforward Neural Networks - Glorot & Bengio.pdf
+|   |   +-- 2010 - Why Does Unsupervised Pre-training Help Deep Learning - Erhan et al..pdf
+|   |   +-- 2011 - An Analysis of Single-Layer Networks in Unsupervised Feature Learning - Coates et al..pdf
+|   +-- 2012
+|   |   +-- 2012 - ADADELTA - An Adaptive Learning Rate Method - Zeiler.pdf
+|   |   +-- 2012 - ImageNet Classification with Deep Convolutional Neural Networks - Krizhevsky et al..pdf
+|   |   +-- 2012 - Improving Neural Networks by Preventing Co-adaptation of Feature Detectors - Srivastava et al..pdf
+|   |   +-- 2012 - Practical Bayesian Optimization of Machine Learning Algorithms - Snoek et al..pdf
+|   |   +-- 2012 - Random Search for Hyper-Parameter Optimization - Bergstra & Bengio.pdf
+|   +-- 2013
+|   |   +-- 2013 - Auto-Encoding Variational Bayes - Kingma & Welling.pdf
+|   |   +-- 2013 - Building High-level Features Using Large Scale Unsupervised Learning - Le et al..pdf
+|   |   +-- 2013 - Learning Hierarchical Features for Scene Labeling - Farabet et al..pdf
+|   |   +-- 2013 - Network In Network - Lin et al..pdf
+|   |   +-- 2013 - OverFeat - Integrated Recognition, Localization and Detection Using Convolutional Networks - Sermanet et al..pdf
+|   |   +-- 2013 - Regularization of Neural Networks Using DropConnect - Wan et al..pdf
+|   |   +-- 2013 - Speech Recognition with Deep Recurrent Neural Networks - Graves et al..pdf
+|   +-- 2014
+|   |   +-- 2014 - Adam - A Method for Stochastic Optimization - Kingma & Ba.pdf
+|   |   +-- 2014 - Caffe - Convolutional Architecture for Fast Feature Embedding - Jia et al..pdf
+|   |   +-- 2014 - DeCAF - A Deep Convolutional Activation Feature for Generic Visual Recognition - Donahue et al.pdf
+|   |   +-- 2014 - Dropout - A Simple Way to Prevent Neural Networks from Overfitting - Srivastava et al.pdf
+|   |   +-- 2014 - Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling - Chung et al.pdf
+|   |   +-- 2014 - Generative Adversarial Networks - Goodfellow et al..pdf
+|   |   +-- 2014 - Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation - Cho et al.pdf
+|   |   +-- 2014 - Neural Turing Machines - Graves et al..pdf
+|   |   +-- 2014 - Return of the Devil in the Details - Delving Deep into Convolutional Nets - Chatfield et al.pdf
+|   |   +-- 2014 - Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation - Girshick et al..pdf
+|   |   +-- 2014 - Semi-Supervised Learning with Deep Generative Models - Kingma et al.pdf
+|   |   +-- 2014 - Sequence to Sequence Learning with Neural Networks - Sutskever et al..pdf
+|   |   +-- 2014 - Show and Tell - A Neural Image Caption Generator - Vinyals et al.pdf
+|   |   +-- 2014 - Stochastic Backpropagation and Approximate Inference in Deep Generative Models - Rezende et al.pdf
+|   |   +-- 2014 - Very Deep Convolutional Networks for Large-Scale Image Recognition - Simonyan & Zisserman.pdf
+|   +-- 2015
+|   |   +-- 2015 - A Neural Conversational Model - Vinyals & Le.pdf
+|   |   +-- 2015 - Adversarial Autoencoders - Alireza Makhzani, Jonathon Shlens, Navdeep Jaitly, Ian Goodfellow, Brendan Frey.pdf
+|   |   +-- 2015 - Batch Normalization - Accelerating Deep Network Training by Reducing Internal Covariate Shift - Ioffe & Szegedy.pdf
+|   |   +-- 2015 - Convolutional LSTM Network - A Machine Learning Approach for Precipitation Nowcasting - Xingjian Shi, Zhourong Chen, Hao Wang, Dit-Yan Yeung, Wai-kin Wong, Wang-chun Woo.pdf
+|   |   +-- 2015 - Deep Residual Learning for Image Recognition - He et al..pdf
+|   |   +-- 2015 - Dynamic Routing Between Capsules - Sara Sabour, Nicholas Frosst, Geoffrey E. Hinton.pdf
+|   |   +-- 2015 - Fast R-CNN - Girshick.pdf
+|   |   +-- 2015 - Faster R-CNN - Towards Real-Time Object Detection with Region Proposal Networks - Shaoqing Ren, Kaiming He, Girshick, Jian Sun.pdf
+|   |   +-- 2015 - Highway Networks - Rupesh K. Srivastava, Klaus Greff, Jürgen Schmidhuber.pdf
+|   |   +-- 2015 - Long-Term Recurrent Convolutional Networks for Visual Recognition and Description - Jeff Donahue, Lisa Anne Hendricks, Sergio Guadarrama, Marcus Rohrbach, Subhashini Venugopalan, Kate Saenko, Trevor Darrell.pdf
+|   |   +-- 2015 - Show, Attend and Tell - Neural Image Caption Generation with Visual Attention - Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.pdf
+|   |   +-- 2015 - Spatial Transformer Networks - Jaderberg et al..pdf
+|   |   +-- 2015 - Training Very Deep Networks - Rupesh K. Srivastava, Klaus Greff, Jürgen Schmidhuber.pdf
+|   |   +-- 2015 - U-Net - Convolutional Networks for Biomedical Image Segmentation - Ronneberger et al..pdf
+|   |   +-- 2015 - Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks - Radford et al..pdf
+|   +-- 2016
+|   |   +-- 2016 - Attend, Infer, Repeat - Fast Scene Understanding with Generative Models - Eslami et al..pdf
+|   |   +-- 2016 - Improved Techniques for Training GANs - Salimans et al..pdf
+|   |   +-- 2016 - Layer Normalization - Ba et al..pdf
+|   |   +-- 2016 - Rethinking the Inception Architecture for Computer Vision - Szegedy et al..pdf
+|   |   +-- 2016 - TensorFlow - A System for Large-Scale Machine Learning - Abadi et al..pdf
+|   |   +-- 2016 - You Only Look Once - Unified, Real-Time Object Detection - Redmon et al..pdf
+|   +-- 2017
+|   |   +-- 2017 - Attention Is All You Need - Vaswani et al..pdf
+|   |   +-- 2017 - Dynamic Routing Between Capsules - Sabour et al..pdf
+|   |   +-- 2017 - Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning - Szegedy et al..pdf
+|   |   +-- 2017 - Mask R-CNN - He et al..pdf
+|   |   +-- 2017 - Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network - Ledig et al..pdf
+|   |   +-- 2017 - REBAR - Low-Variance, Unbiased Gradient Estimates for Discrete Latent Variable Models - Tucker et al..pdf
+|   |   +-- 2017 - Unpaired Image-to-Image Translation Using Cycle-Consistent Adversarial Networks - Zhu et al..pdf
+|   |   +-- 2017 - Wasserstein GAN - Arjovsky et al..pdf
++-- Pre-1980
+|   +-- 1943 - A Logical Calculus of the Ideas Immanent in Nervous Activity - McCulloch & Pitts.pdf
+|   +-- 1958 - The Perceptron - A Probabilistic Model for Information Storage and Organization in the Brain - Rosenblatt.pdf
+|   +-- 1960s - Perceptron Lecture Notes - Rosenblatt.pdf
+|   +-- Pre-1980-Notes.md
+|   +-- Pre-1980-Notes.md-TR.md
