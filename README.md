@@ -111,6 +111,182 @@ Start with the historical notes if you want the conceptual timeline. Start with 
 
 For runnable projects, each subdirectory includes its own README with setup instructions, architecture notes, results, and reproduction steps.
 
+## Clone Setup (Git LFS Required)
+
+PDF papers and large binary datasets in this repository are stored with [Git LFS](https://git-lfs.com/), not as regular Git blobs. If Git LFS is missing on your machine, clone will leave small pointer files (~130 bytes) instead of real PDFs. Those pointer files start with `version https://git-lfs.github.com/spec/v1` and cannot be opened as PDFs.
+
+### Quick setup (recommended)
+
+Run the setup script for your platform **inside the repository** after clone (or to fix an existing clone):
+
+| Platform | Setup script | Verify only |
+|----------|--------------|-------------|
+| Windows (PowerShell) | `.\scripts\setup-lfs.ps1` | `.\scripts\verify-lfs.ps1` |
+| macOS / Linux | `./scripts/setup-lfs.sh` | `./scripts/verify-lfs.sh` |
+
+On macOS/Linux, make scripts executable once if needed:
+
+```bash
+chmod +x scripts/setup-lfs.sh scripts/verify-lfs.sh
+```
+
+Each setup script will: install Git LFS if missing, run `git lfs install`, run `git lfs pull`, and verify all PDFs.
+
+---
+
+### Windows
+
+**1. Install Git LFS** (once per machine)
+
+```powershell
+winget install GitHub.GitLFS
+```
+
+Git LFS is also included with [Git for Windows](https://git-scm.com/download/win).
+
+**2. Clone**
+
+```powershell
+git lfs install
+git clone https://github.com/dogukannparlak/ai-research-journey.git
+cd ai-research-journey
+git lfs pull
+```
+
+**3. Fix an existing clone**
+
+```powershell
+cd ai-research-journey
+.\scripts\setup-lfs.ps1
+```
+
+**4. Verify**
+
+```powershell
+Get-Content "History/2010s/2012/2012 - ImageNet Classification with Deep Convolutional Neural Networks - Krizhevsky et al..pdf" -TotalCount 1
+# Expected: %PDF-1.x
+
+.\scripts\verify-lfs.ps1
+```
+
+**5. Recommended Git setting**
+
+```powershell
+git config --global core.autocrlf false
+```
+
+---
+
+### macOS
+
+**1. Install Git LFS** (once per machine)
+
+```bash
+brew install git-lfs
+```
+
+**2. Clone**
+
+```bash
+git lfs install
+git clone https://github.com/dogukannparlak/ai-research-journey.git
+cd ai-research-journey
+git lfs pull
+```
+
+**3. Fix an existing clone**
+
+```bash
+cd ai-research-journey
+chmod +x scripts/setup-lfs.sh scripts/verify-lfs.sh
+./scripts/setup-lfs.sh
+```
+
+**4. Verify**
+
+```bash
+head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convolutional Neural Networks - Krizhevsky et al..pdf"
+# Expected: %PDF-1.x
+
+./scripts/verify-lfs.sh
+```
+
+**5. Recommended Git setting**
+
+```bash
+git config --global core.autocrlf false
+```
+
+---
+
+### Linux
+
+**1. Install Git LFS** (once per machine)
+
+Debian / Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install git-lfs
+```
+
+Fedora:
+
+```bash
+sudo dnf install git-lfs
+```
+
+Arch:
+
+```bash
+sudo pacman -S git-lfs
+```
+
+**2. Clone**
+
+```bash
+git lfs install
+git clone https://github.com/dogukannparlak/ai-research-journey.git
+cd ai-research-journey
+git lfs pull
+```
+
+**3. Fix an existing clone**
+
+```bash
+cd ai-research-journey
+chmod +x scripts/setup-lfs.sh scripts/verify-lfs.sh
+./scripts/setup-lfs.sh
+```
+
+**4. Verify**
+
+```bash
+head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convolutional Neural Networks - Krizhevsky et al..pdf"
+# Expected: %PDF-1.x
+
+./scripts/verify-lfs.sh
+```
+
+**5. Recommended Git setting**
+
+```bash
+git config --global core.autocrlf false
+```
+
+---
+
+### Adding new PDFs (all platforms)
+
+```bash
+git add "History/.../paper.pdf"
+git lfs status
+git commit -m "Add paper"
+git push
+```
+
+After `git add`, the staged file should be a small LFS pointer (~130 bytes), not a multi-megabyte blob.
+
 ## Philosophy
 
 AI research is easier to understand when it is treated as a sequence of engineering responses to specific failures:
