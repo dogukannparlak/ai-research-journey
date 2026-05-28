@@ -115,6 +115,37 @@ For runnable projects, each subdirectory includes its own README with setup inst
 
 PDF papers and large binary datasets in this repository are stored with [Git LFS](https://git-lfs.com/), not as regular Git blobs. If Git LFS is missing on your machine, clone will leave small pointer files (~130 bytes) instead of real PDFs. Those pointer files start with `version https://git-lfs.github.com/spec/v1` and cannot be opened as PDFs.
 
+### Clone readiness
+
+| Topic | Status | Notes |
+|-------|--------|-------|
+| File path length (Windows) | OK | Longest repo path is ~166 characters — well below the 260-character Windows limit |
+| PDF integrity | Requires Git LFS | 146 PDFs (~575 MB) are stored via LFS, not in regular Git |
+| `History/` papers | OK | 81 papers under `History/` |
+| Roadmap papers | OK | 65 papers under `Deep-Learning-Papers-Reading-Roadmap/pdfs/` (short folder names) |
+| macOS / Linux clone | OK | No path-length issues; Git LFS still required |
+| Windows clone | OK | Use Git LFS + `core.longpaths true` (recommended below) |
+
+**Bottom line:** `git clone` will not fail because of long filenames. The only common clone problem is **Git LFS not being installed** — PDFs will look broken until you run `git lfs pull`.
+
+### What is stored with LFS
+
+- All `*.pdf` files (146 papers total)
+- CIFAR-10 dataset files under `Implementations/Deep Learning/CNN/AlexNet-CIFAR10-2012/data/`
+- Large `.tar.gz` archives tracked by [`.gitattributes`](.gitattributes)
+
+After a successful clone and LFS pull, verification should report:
+
+```text
+OK: All 146 tracked PDFs are valid (start with %PDF-).
+```
+
+Run `.\scripts\verify-lfs.ps1` (Windows) or `./scripts/verify-lfs.sh` (macOS/Linux) to confirm.
+
+### GitHub LFS quota
+
+Total LFS content is about **575 MB**. GitHub's free tier includes **1 GB LFS storage** — enough for this repository. If you clone or pull very frequently, you may hit the monthly **bandwidth** limit; wait for the reset or upgrade if that happens.
+
 ### Quick setup (recommended)
 
 Run the setup script for your platform **inside the repository** after clone (or to fix an existing clone):
@@ -167,13 +198,17 @@ Get-Content "History/2010s/2012/2012 - ImageNet Classification with Deep Convolu
 # Expected: %PDF-1.x
 
 .\scripts\verify-lfs.ps1
+# Expected: OK: All 146 tracked PDFs are valid
 ```
 
-**5. Recommended Git setting**
+**5. Recommended Git settings**
 
 ```powershell
 git config --global core.autocrlf false
+git config --global core.longpaths true
 ```
+
+`core.longpaths true` avoids Windows `Filename too long` errors on deep clone paths. File and folder names in this repo are already shortened, but this setting is still recommended.
 
 ---
 
@@ -209,6 +244,7 @@ head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convoluti
 # Expected: %PDF-1.x
 
 ./scripts/verify-lfs.sh
+# Expected: OK: All 146 tracked PDFs are valid
 ```
 
 **5. Recommended Git setting**
@@ -216,6 +252,8 @@ head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convoluti
 ```bash
 git config --global core.autocrlf false
 ```
+
+No Windows-style path-length issues on macOS, but Git LFS is still required for PDFs.
 
 ---
 
@@ -266,6 +304,7 @@ head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convoluti
 # Expected: %PDF-1.x
 
 ./scripts/verify-lfs.sh
+# Expected: OK: All 146 tracked PDFs are valid
 ```
 
 **5. Recommended Git setting**
@@ -273,6 +312,8 @@ head -n 1 "History/2010s/2012/2012 - ImageNet Classification with Deep Convoluti
 ```bash
 git config --global core.autocrlf false
 ```
+
+No Windows-style path-length issues on Linux, but Git LFS is still required for PDFs.
 
 ---
 
